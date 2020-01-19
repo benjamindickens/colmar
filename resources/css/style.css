@@ -40,6 +40,7 @@ h2 {
     background: white;
     border-bottom: 1px solid lightgray;
 }
+.mob-nav{display: none;}
 .logo {
     display: grid;
     padding-left: 1.5rem;
@@ -147,6 +148,9 @@ h2 {
     color: rgb(107, 189, 221);
 
 }
+img.mobile{
+    display: none;
+}
 .box1 {
    border-bottom: 1px solid lightgray; 
 }
@@ -218,4 +222,126 @@ footer {
     display: grid;
     grid-auto-flow: column;
     grid-column: 3 / 4;
+}
+
+
+/* media */
+
+@media only screen and (max-width: 650px){
+    /* showcase-media */ 
+    .main-nav{
+        display: none;
+    }
+    .mob-nav{
+        display: initial;
+        position: fixed;
+        width:100%;
+    }
+    .mob-nav ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        height: 64px;
+        grid-gap: 40px;
+        list-style: none;
+        justify-items: center;
+        align-items: center;
+    }
+    .showcase {
+        grid-template-columns: 1fr;
+        padding: 0;
+        grid-gap: 0;
+        text-align: center;
+    }
+    .showcase-content {
+        max-width: none;
+        padding: 2.5rem 2rem;
+        grid-gap: 0;
+
+    }
+    .showcase-content h1 {
+        padding-bottom: 2.5rem;
+        font-size: 2.5rem;
+    }
+    .showcase-content h2 {
+        font-size: 1.4rem;
+    }
+    
+    .showcase-content p {
+            padding-bottom: 2rem;
+    }
+
+    /* info-media */
+    img.desktop {
+        display: none;
+    }
+    img.mobile {
+        display: initial;
+    }
+
+        .section-main.info {
+        display: none;
+    }
+    .aside {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+        border: none;
+    }
+    .section-aside{
+        text-align: center;
+        grid-gap: 0;
+    }
+    .section-grid {
+        grid-template-columns: 1fr;
+    }
+    .aside-content {
+        padding: 0.8rem;
+    }
+
+    /* tesis */
+
+    .section-aside.tesis {
+        display: none;
+    }
+    .main-content.tesis {
+        display: none;
+    }
+    .section-main.tesis {
+        padding: 1.5rem 0 1rem 0;
+        overflow: hidden;
+    }
+    .section-grid.tesis {
+        padding: 0;
+    }
+
+    /* courses */
+    .courses-grid{
+        grid-template-columns: auto;
+        box-shadow: none;
+        padding: 1.5rem;
+        grid-gap: 8px;
+        text-align: center;
+    }
+    .courses-grid img {
+        display: none;
+    }
+    .courses-wrapper {
+        justify-content: unset;
+        background-color: white;
+        padding: 0.5rem 0;
+    }
+    .box-content{
+        background: lightgray;
+        font-size: 1.1rem ;
+    }
+    .box-content p{
+        display: none;
+    }
+
+    /* footer */
+    footer {
+        border: none;
+    }
+    .footer-content {
+        display: none;
+    }
 }
